@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/Css/signup.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <script src="/Javascript/signup.js"></script>
+    <title>Registro</title>
+</head>
+<body>
+
+    <div x-data="registrationForm()" class="container">
+        <div class="Registro"></div>
+        <form @submit.prevent="register">
+            <h1>Ingrese sus datos para registrarse</h1>
+            <div class="form-group">
+                <span>Usuario</span>
+                <input type="text" x-model="login" placeholder="Ingresar nombre" required>
+            </div>
+            <div class="form-group">
+                <span>Nombre</span>
+                <input type="text" x-model="name" placeholder="Ingresar nombre" required>
+            </div>
+            <div class="form-group">
+                <span>Contraseña</span>
+                <input type="password" x-model="password" placeholder="Ingresar contraseña" required>
+            </div>
+            <div class="form-group">
+                <span>Email</span>
+                <input type="email" x-model="email" placeholder="Ingresar email" required>
+            </div>
+            <div class="form-group">
+                <span>Dirección</span>
+                <input type="text" x-model="address" placeholder="Ingresar dirección" required>
+            </div>
+            <div class="form-group">
+                <span>Teléfono</span>
+                <input type="tel" x-model="phone_number" placeholder="Ingresar teléfono" required>
+            </div>
+
+            <div class="botones-container">
+                <button type="submit" class="btn btn-primary"><i>Registrar</i></button>
+                <button type="button" class="btn btn-secondary" @click="cancelar"><i>Cancelar</i></button>
+            </div>
+        </form>
+    </div>
+
+</body>
+</html>
